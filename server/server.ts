@@ -18,6 +18,7 @@ server.get("/", (request: express.Request, response: express.Response) => {
   response.send("welcome to the tomadoro service!");
 });
 
-server.listen(3000, () => {
-  process.stdout.write("listening on port 3000...\n");
+const port: number = 3000;
+server.listen(port, () => {
+  process.stdout.write(`listening on port ${port}...\n`);
 });
