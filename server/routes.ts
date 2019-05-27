@@ -1,11 +1,11 @@
 import express from "express";
 
-const router: express.Router = Router();
+const router: express.Router = express.Router();
 
 router.use((
   request: express.Request,
   reponse: express.Response,
-  next: NextFunction,
+  next: express.NextFunction,
 ): void => {
   process.stdout.write(`${request.method}: ${request.path}\n`);
 
