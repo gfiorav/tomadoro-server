@@ -1,19 +1,19 @@
-import sequelize from "sequelize";
+import express from "express";
 
 export = {
-  create: (request: sequelize.Request, response: sequelize.Response) => {
+  create: (request: express.Request, response: express.Response) => {
     // TODO: Implement Users create
   },
-  delete: (request: sequelize.Request, response: sequelize.Response) => {
+  delete: (request: express.Request, response: express.Response) => {
     // TODO: Implement Users delete
   },
-  index: (request: sequelize.Request, response: sequelize.Response) => {
+  index: (request: express.Request, response: express.Response) => {
     // TODO: Implement Users index
   },
-  show: (request: sequelize.Request, response: sequelize.Response) => {
+  show: (request: express.Request, response: express.Response) => {
     // TODO: Implement Users show
   },
-  update: (request: sequelize.Request, response: sequelize.Response) => {
+  update: (request: express.Request, response: express.Response) => {
     // TODO: Implement Users update
   },
 };
