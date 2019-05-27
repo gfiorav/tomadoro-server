@@ -13,4 +13,4 @@ const attributes: sequelize.ModelAttributes = {
 
 const options: sequelize.InitOptions = {};
 
-export = sequelize.define(attributes, options);
+export = db.define("session", attributes, options);
