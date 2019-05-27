@@ -1,5 +1,5 @@
 import sequelize from "sequelize";
-import db from "./db";
+import db from "../db";
 
 const attributes: sequelize.ModelAttributes = {
   email: {
