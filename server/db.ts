@@ -1,6 +1,6 @@
-import Sequelize from "sequelize";
+import sequelize from "sequelize";
 
-const db: sequelize.Sequelize = new Sequelize(
+const db: sequelize.Sequelize = new sequelize.Sequelize(
   process.env.DATABASE_NAME || "tomadoro_dev",
   process.env.DATABASE_USERNAME || "tomadoro",
   process.env.DATABASE_PASSWORD || "tomadoro",
