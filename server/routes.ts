@@ -32,4 +32,12 @@ router.delete("users/:uuid", (request: express.Request, response: express.Respon
   // TODO: Implement delete User
 });
 
+router.post("sessions", (request: express.Request, response: express.Response): void => {
+  // TODO: Implement create Session
+});
+
+router.delete("sessions/:uuid", (request: express.Request, response: express.Response): void => {
+  // TODO: Implement delete Session
+});
+
 export = router;
