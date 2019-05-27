@@ -6,12 +6,12 @@ const {
   Router,
 } = express;
 
-const router: Router = express.Router();
+const router: Router = Router();
 
 router.use((
-  request: express.Request,
-  reponse: express.Response,
-  next: express.NextFunction,
+  request: Request,
+  reponse: Response,
+  next: NextFunction,
 ): void => {
   process.stdout.write(`${request.method}: ${request.path}\n`);
 
@@ -19,23 +19,23 @@ router.use((
 });
 
 router.use("users/:uuid", (request: Request, response: Response): void => {
-  process.stdout.write(request.params);
+  // TODO: Implement User loader
 });
 
 router.post("users", (request: Request, response: Response): void => {
-  // empty
+  // TODO: Implement create User
 });
 
 router.get("users/:uuid", (request: Request, response: Response): void => {
-  // empty
+  // TODO: Implement show User
 });
 
 router.put("users/:uuid", (request: Request, response: Response): void => {
-  // empty
+  // TODO: Implement update User
 });
 
 router.delete("users/:uuid", (request: Request, response: Response): void => {
-  // empty
+  // TODO: Implement delete User
 });
 
 export = router;
