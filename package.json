@@ -13,6 +13,7 @@
     "@types/sequelize": "^4.28.2",
     "esm": "^3.2.25",
     "express": "^4.17.1",
+    "pg": "^7.11.0",
     "sequelize": "^5.8.6"
   },
   "devDependencies": {
