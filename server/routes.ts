@@ -12,12 +12,12 @@ router.use((
   next();
 });
 
-router.use("users/:uuid", (request: express.Request, response: express.Response): void => {
-  // TODO: Implement User loader
-});
-
 router.post("users", (request: express.Request, response: express.Response): void => {
   // TODO: Implement create User
+});
+
+router.use("users/:uuid", (request: express.Request, response: express.Response): void => {
+  // TODO: Implement User loader
 });
 
 router.get("users/:uuid", (request: express.Request, response: express.Response): void => {
