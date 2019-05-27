@@ -1,9 +1,7 @@
 import express from "express";
 import routes from "./routes";
 
-const server: express.Application = express();
-
-const router: Router = routes.router;
+const router: express.Router = routes.router;
 server.use(routes);
 
 const port: number = 3000;
