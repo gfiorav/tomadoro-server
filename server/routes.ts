@@ -1,5 +1,8 @@
 import express from "express";
 
+import Session from "./models/session";
+import User from "./models/user";
+
 const router: express.Router = express.Router();
 
 router.use((
@@ -8,6 +11,36 @@ router.use((
   next: express.NextFunction,
 ): void => {
   process.stdout.write(`${request.method}: ${request.path}\n`);
+
+  next();
+});
+
+router.use(async (
+  request: express.Request,
+  reponse: express.Response,
+  next: express.NextFunction,
+): void => {
+  const { user_uuid, session_uuid } = request.params;
+
+  if (user_uuid) {
+    const user = await User.findByPkey(user_uuid);
+
+    if (user) {
+      request.user = user;
+    } else {
+      throw new Error("Couldn't load User");
+    }
+  }
+
+  if (session_uuid) {
+    const session = await Session.findByPkey(session_uuid);
+
+    if (session) {
+      request.session = session;
+    } else {
+      throw new Error("Couldn't load Session");
+    }
+  }
 
   next();
 });
