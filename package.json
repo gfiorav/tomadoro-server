@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "module": "main.js",
-  "scripts": {},
+  "scripts": {
+    "build": "tsc"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
