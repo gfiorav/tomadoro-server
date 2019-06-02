@@ -19,7 +19,7 @@ router.use(async (
   request: express.Request,
   reponse: express.Response,
   next: express.NextFunction,
-): void => {
+): Promise<void> => {
   const { user_uuid, session_uuid } = request.params;
 
   if (user_uuid) {
