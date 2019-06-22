@@ -23,7 +23,7 @@ router.use(async (
   const { user_uuid, session_uuid } = request.params;
 
   if (user_uuid) {
-    const user = await User.findByPkey(user_uuid);
+    const user = await User.findByPk(user_uuid);
 
     if (user) {
       request.user = user;
@@ -33,7 +33,7 @@ router.use(async (
   }
 
   if (session_uuid) {
-    const session = await Session.findByPkey(session_uuid);
+    const session = await Session.findByPk(session_uuid);
 
     if (session) {
       request.session = session;
