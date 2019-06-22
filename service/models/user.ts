@@ -1,5 +1,7 @@
-import sequelize from "sequelize";
+import { ModelAttributes } from "sequelize";
+
 import db from "../db";
+import { IUserAttributes, IUserInstance } from "./types";
 
 const attributes: sequelize.ModelAttributes = {
   email: {
@@ -16,4 +18,4 @@ const attributes: sequelize.ModelAttributes = {
   },
 };
 
-export = db.define("user", attributes);
+export = db.define<IUserInstance, IUserAttributes>("user", attributes);

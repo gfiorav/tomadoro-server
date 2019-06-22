@@ -2,6 +2,7 @@ import express from "express";
 
 import Session from "./models/session";
 import User from "./models/user";
+import { IExpressRequest } from "./types";
 
 const router: express.Router = express.Router();
 
@@ -16,7 +17,7 @@ router.use((
 });
 
 router.use(async (
-  request: express.Request,
+  request: IExpressRequest,
   reponse: express.Response,
   next: express.NextFunction,
 ): Promise<void> => {
